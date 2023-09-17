@@ -35,7 +35,7 @@ h3 {
 #blurb {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #333; /* Adjust the text color as needed */
+    color: #606060; /* Adjust the text color as needed */
     position: absolute;
     top: 133px; /* Adjust the top position as needed */
     left: 1550px; /* Fixed left edge position relative to mainDiv */
@@ -127,6 +127,20 @@ h3 {
     left: 50%;
 }
 
+.popup-large {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    background-color: #8c98a1;
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    display: none;
+    transform: translate(-11%, -1%);
+    left: 170%;
+}
+
 /* Add styles for the new button container */
 .pictogram_grp {
     position: fixed;
@@ -146,6 +160,14 @@ h3 {
     background-size: cover;
     cursor: pointer;
     margin-bottom: 10px; /* Adjust the margin between buttons as needed */
+}
+
+.picto:hover::before {
+    filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+.picto:hover .popup-large {
+    display: block;
 }
 
 /* Example button positions */
@@ -172,7 +194,7 @@ h3 {
     right: 2%;
     width: 570px; /* Adjust the width as needed */
     height: 700px; /* Adjust the height as needed */
-    background-color: #c4cad0;
+    background-color: #8c98a1;
     border: 15px solid #e2e2e2;
     border-radius: 10px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -188,7 +210,7 @@ h3 {
 
 .imageWindow p {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(131, 136, 139);
+    color: rgb(255, 255, 255);
     padding-left: 20px;
     text-align: left;
 }
