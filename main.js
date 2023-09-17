@@ -11,11 +11,11 @@ const images = [
 ];
 
 const texts = [
-    'Text under Image 1',
-    'Text under Image 2',
-    'Text under Image 3',
-    'Text under Image 4',
-    'Text under Image 5',
+    'Brand and Precinct Identification',
+    'Wayfinding and User Journey',
+    'Landscape Elements',
+    'Facades and Built Forms',
+    'User Amenity, Lifestyle and Wellbeing',
 ];
 
 buttons.forEach((button, index) => {
