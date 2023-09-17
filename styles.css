@@ -133,7 +133,7 @@ h3 {
     width: 700px;
     height: 450px;
     background-color: #8c98a1;
-    color: #fff;
+    color: #c6cbcf;
     padding: 30px;
     border-radius: 20px;
     display: none;
@@ -156,7 +156,7 @@ h3 {
     width: 150px;
     height: 150px;
     border-radius: 20px;
-    border: 3px solid #c6cbcf;
+    border: 3px solid #d8d9da;
     background-size: cover;
     cursor: pointer;
     margin-bottom: 10px; /* Adjust the margin between buttons as needed */
@@ -172,19 +172,23 @@ h3 {
 
 /* Example button positions */
 .picto:nth-child(1) {
-    background-image: url('');
+    background-image: url('images/pictos-brand.png');
 }
 
 .picto:nth-child(2) {
-    background-image: url('');
+    background-image: url('images/pictos-wayfinding.png');
 }
 
 .picto:nth-child(3) {
-    background-image: url('');
+    background-image: url('images/pictos-landscape.png');
 }
 
 .picto:nth-child(4) {
-    background-image: url('');
+    background-image: url('images/pictos-facades.png');
+}
+
+.picto:nth-child(5) {
+    background-image: url('images/pictos-amenity.png');
 }
 
 /* Styling for the imageWindow */
