@@ -1,6 +1,6 @@
-// JavaScript to handle showing/hiding imageWindow on button click
+// JavaScript to handle showing/hiding imageWindow on button hover
 const buttons = document.querySelectorAll('.coords_but');
-const imageWindow = document.getElementById('imageWindow');
+const imageWindows = document.querySelectorAll('.imageWindow');
 
 const images = [
     'images/image_01.png',
@@ -19,25 +19,25 @@ const texts = [
 ];
 
 buttons.forEach((button, index) => {
-    button.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent click event from reaching window
+    button.addEventListener('mouseenter', (e) => {
+        e.stopPropagation(); // Prevent hover event from affecting other elements
 
-        // Set the image source and text based on the button clicked
+        // Set the image source and text based on the button hovered
         const imgSrc = images[index];
-        const img = imageWindow.querySelector('img');
+        const img = imageWindows[index].querySelector('img');
         img.src = imgSrc;
 
-        const text = imageWindow.querySelector('#imageText');
+        const text = imageWindows[index].querySelector('p');
         text.textContent = texts[index];
 
-        // Show imageWindow
-        imageWindow.style.display = 'block';
+        // Show the corresponding imageWindow
+        imageWindows[index].style.display = 'block';
     });
-});
 
-// Add event listener to close imageWindow when clicking anywhere in the window
-window.addEventListener('click', () => {
-    if (imageWindow.style.display === 'block') {
-        imageWindow.style.display = 'none';
-    }
+    button.addEventListener('mouseleave', () => {
+        // Hide all imageWindows when mouse leaves the button
+        imageWindows.forEach((window) => {
+            window.style.display = 'none';
+        });
+    });
 });
