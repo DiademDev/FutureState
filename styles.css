@@ -2,57 +2,40 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    background: url('images/background.jpg') no-repeat left top;
+    background-size: 1750px 1166px; 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #b2bec4;
+    background-color: #698694;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color: rgb(221, 223, 224);
+    font-size: 2.5em;
+    color: rgb(184, 251, 15);
     position: absolute;
-    top: 5px;
-    left: 50px;
+    top: 30px;
+    left: 70px;
+    z-index: 99;
 }
 
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(135, 140, 145);
+#lightPanel {
     position: absolute;
-    top: 70px;
-    left: 50px;
+    background-color: #313537;
+    width: 400px;
+    height: 100%;
+    top: 0px;
+    left: 0%;
+    opacity: 20%;
+    z-index: 9;
 }
 
 #logo {
     position: absolute;
     top: 50px;
     right: 2%;
-    opacity: 20%;
-}
-
-#blurb {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #606060; /* Adjust the text color as needed */
-    position: absolute;
-    top: 60px; /* Adjust the top position as needed */
-    left: 1500px; /* Fixed left edge position relative to mainDiv */
-    right: 2%; /* Adjust the right edge position as needed (5% from the right edge of the window) */
-    z-index: 99;
-}
-
-#mainDiv {
-    width: 1280px;
-    height: 780px;
-    background: url('images/background.jpg') no-repeat center center;
-    background-size: cover;
-    border-radius: 20px;
-    border: 3px solid #d8d9da;
-    position: absolute;
-    top: 150px;
-    left: 230px;
+    opacity: 100%;
 }
 
 .coords_but {
@@ -81,7 +64,7 @@ h3 {
 }
 
 .coords_but:hover {
-    filter: brightness(1.2); /* Increase brightness on hover */
+    filter: brightness(1.0); /* Increase brightness on hover */
 }
 
 .coords_but:hover .popup {
@@ -129,22 +112,24 @@ h3 {
 .popup-large {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    width: 700px;
-    height: 450px;
-    background-color: #8c98a1;
-    color: #c6cbcf;
-    padding: 30px;
-    border-radius: 20px;
+    width: 200px;
+    height: 100px;
+    background-color: #8ca0a1;
+    color: #465152;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     display: none;
     transform: translate(-11%, -1%);
-    left: 170%;
+    left: 130%;
 }
 
 /* Add styles for the new button container */
 .pictogram_grp {
     position: fixed;
-    left: 50px; /* Adjust the left position as needed */
-    top: 150px; /* Adjust the top position as needed */
+    left: 70px; /* Adjust the left position as needed */
+    top: 180px; /* Adjust the top position as needed */
     display: flex;
     flex-direction: column;
     z-index: 999;
@@ -152,17 +137,15 @@ h3 {
 
 /* Add styles for the new buttons */
 .picto {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    border: 3px solid #d8d9da;
+    width: 120px;
+    height: 120px;
     background-size: cover;
     cursor: pointer;
-    margin-bottom: 10px; /* Adjust the margin between buttons as needed */
+    margin-bottom: 30px; /* Adjust the margin between buttons as needed */
 }
 
 .picto:hover {
-    filter: brightness(1.1); /* Increase brightness on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
 }
 
 .picto:hover .popup-large {
@@ -192,37 +175,42 @@ h3 {
 
 /* Styling for the imageWindow */
 .imageWindow {
-    position: fixed;
-    top: 150px;
-    right: 2%;
-    width: 570px; /* Adjust the width as needed */
-    height: 700px; /* Adjust the height as needed */
-    background-color: #8c98a1;
-    border: 15px solid #e2e2e2;
-    border-radius: 10px;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 372px;
+    left: -372px;
+    width: 400px;
+    height: 400px;
+    background: url('images/popup_background.png');
+    background-size: cover;
     display: none;
     overflow: hidden;
-    z-index: 999;
+    z-index: 999999;
 }
 
 .imageWindow img {
-    max-width: 100%;
-    max-height: 60%; 
+    position: relative;
+    padding: 15px;
+    top: 81px;
+    left: 82px; 
+    width: 273px;
+    height: 180px;
 }
 
 .imageWindow p {
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    padding-left: 20px;
+    padding: 15px;
+    top: 50px;
+    left: 82px; 
     text-align: left;
 }
 
 .copyright {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #858c8f; /* Adjust the text color as needed */
+    color: #afc3cb; /* Adjust the text color as needed */
     position: absolute;
-    top: 950px; /* Adjust the distance from the bottom as needed */
-    left: 1427px; /* Adjust the distance from the left as needed */
+    top: 1180px; /* Adjust the distance from the bottom as needed */
+    right: 2%; /* Adjust the distance from the left as needed */
 }
