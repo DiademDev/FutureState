@@ -123,6 +123,7 @@ h1 {
     transform: translate(-11%, -1%);
     left: 130%;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s;
 }
 
@@ -186,6 +187,7 @@ h1 {
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.5s;
+    pointer-events: none;
     z-index: 999999;
 }
 
