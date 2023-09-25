@@ -26,16 +26,14 @@ pictos.forEach((picto, index) => {
     });
 
     picto.addEventListener('mouseleave', () => {
-        // Hide all popup-large with fade-out effect when mouse leaves the coords_but
-        popupsLarge.forEach((popup) => {
-            popup.style.opacity = '0';
-        });
+        // Hide the corresponding popup-large with fade-out effect
+        popupsLarge[index].style.opacity = '0';
     });
 });
 
 coordsButtons.forEach((button, index) => {
     button.addEventListener('mouseenter', () => {
-        // Set the image source and text based on the picto hovered
+        // Set the image source and text based on the button hovered
         const imgSrc = images[index];
         const img = imageWindows[index].querySelector('img');
         img.src = imgSrc;
@@ -48,9 +46,7 @@ coordsButtons.forEach((button, index) => {
     });
 
     button.addEventListener('mouseleave', () => {
-        // Hide all imageWindows with fade-out effect when mouse leaves the picto
-        imageWindows.forEach((window) => {
-            window.style.opacity = '0';
-        });
+        // Hide the corresponding imageWindow with fade-out effect
+        imageWindows[index].style.opacity = '0';
     });
 });
