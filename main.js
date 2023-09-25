@@ -1,6 +1,7 @@
-// JavaScript to handle showing/hiding imageWindow on button hover
-const buttons = document.querySelectorAll('.coords_but');
+const pictos = document.querySelectorAll('.picto');
 const imageWindows = document.querySelectorAll('.imageWindow');
+const coordsButtons = document.querySelectorAll('.coords_but');
+const popupsLarge = document.querySelectorAll('.popup-large');
 
 const images = [
     'images/image_01.png',
@@ -18,11 +19,23 @@ const texts = [
     'User Amenity, Lifestyle and Wellbeing',
 ];
 
-buttons.forEach((button, index) => {
-    button.addEventListener('mouseenter', (e) => {
-        e.stopPropagation(); // Prevent hover event from affecting other elements
+pictos.forEach((picto, index) => {
+    picto.addEventListener('mouseenter', () => {
+        // Show the corresponding popup-large with fade-in effect
+        popupsLarge[index].style.opacity = '1';
+    });
 
-        // Set the image source and text based on the button hovered
+    picto.addEventListener('mouseleave', () => {
+        // Hide all popup-large with fade-out effect when mouse leaves the coords_but
+        popupsLarge.forEach((popup) => {
+            popup.style.opacity = '0';
+        });
+    });
+});
+
+coordsButtons.forEach((button, index) => {
+    button.addEventListener('mouseenter', () => {
+        // Set the image source and text based on the picto hovered
         const imgSrc = images[index];
         const img = imageWindows[index].querySelector('img');
         img.src = imgSrc;
@@ -30,14 +43,14 @@ buttons.forEach((button, index) => {
         const text = imageWindows[index].querySelector('p');
         text.textContent = texts[index];
 
-        // Show the corresponding imageWindow
-        imageWindows[index].style.display = 'block';
+        // Show the corresponding imageWindow with fade-in effect
+        imageWindows[index].style.opacity = '1';
     });
 
     button.addEventListener('mouseleave', () => {
-        // Hide all imageWindows when mouse leaves the button
+        // Hide all imageWindows with fade-out effect when mouse leaves the picto
         imageWindows.forEach((window) => {
-            window.style.display = 'none';
+            window.style.opacity = '0';
         });
     });
 });
