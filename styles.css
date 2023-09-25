@@ -120,9 +120,10 @@ h1 {
     padding-top: 20px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    display: none;
     transform: translate(-11%, -1%);
     left: 130%;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 /* Add styles for the new button container */
@@ -182,8 +183,9 @@ h1 {
     height: 400px;
     background: url('images/popup_background.png');
     background-size: cover;
-    display: none;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
     z-index: 999999;
 }
 
