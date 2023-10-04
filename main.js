@@ -2,6 +2,7 @@ const pictos = document.querySelectorAll('.picto');
 const imageWindows = document.querySelectorAll('.imageWindow');
 const coordsButtons = document.querySelectorAll('.coords_but');
 const popupsLarge = document.querySelectorAll('.popup-large');
+const body = document.body;
 
 const images = [
     'images/image_01.png',
@@ -50,3 +51,13 @@ coordsButtons.forEach((button, index) => {
         imageWindows[index].style.opacity = '0';
     });
 });
+
+function adjustBackgroundSize() {
+    const screenWidth = window.innerWidth;
+    const maxWidth = 768;
+    const backgroundSize = screenWidth > maxWidth ? 'cover' : '1280px';
+    body.style.backgroundSize = backgroundSize;
+}
+
+adjustBackgroundSize();
+window.addEventListener('resize', adjustBackgroundSize);
