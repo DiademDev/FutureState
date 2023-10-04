@@ -3,11 +3,17 @@ body {
     padding: 0;
     display: flex;
     background: url('images/background.jpg') no-repeat left top;
-    background-size: 1750px 1166px; 
+    background-size: cover;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #698694;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
 }
 
 h1 {
