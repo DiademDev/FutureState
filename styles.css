@@ -175,6 +175,10 @@ h1 {
     background-image: url('images/pictos-amenity.png');
 }
 
+.picto:nth-child(6) {
+    background-image: url('images/pictos-sustainable.png');
+}
+
 /* Styling for the imageWindow */
 .imageWindow {
     position: relative;
