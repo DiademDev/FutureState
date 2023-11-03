@@ -32,14 +32,14 @@ const images = [
 ];
 
 const texts = [
-    'Brand Text 1',
-    'Brand Text 2',
-    'Brand Text 3',
-    'Brand Text 4',
-    'Brand Text 5',
-    'Brand Text 6',
-    'Brand Text 7',
-    'Brand Text 8',
+    'Sky Sign',
+    'Main ID Pylon',
+    'Interpretive',
+    'Vertical Garden',
+    'Swales',
+    'Permeable Paving',
+    'Tree Guards',
+    'Living Pergola',
     'Brand Text 9',
     'Brand Text 10',
     'Brand Text 11',
@@ -61,21 +61,21 @@ const texts = [
 // Show the first 5 coordsButtons when the first picto is clicked
 pictos[0].addEventListener('click', () => {
     coordsButtons.forEach((button, index) => {
-        button.style.display = index < 5 ? 'block' : 'none';
+        button.style.display = index < 2 ? 'block' : 'none';
     });
 });
 
 // Show coordsButtons 5-8 when picto2 is clicked
 pictos[1].addEventListener('click', () => {
     coordsButtons.forEach((button, index) => {
-        button.style.display = index >= 5 && index < 9 ? 'block' : 'none';
+        button.style.display = index >= 2 && index < 3 ? 'block' : 'none';
     });
 });
 
 // Show coordsButtons 10-11 when picto3 is clicked
 pictos[2].addEventListener('click', () => {
     coordsButtons.forEach((button, index) => {
-        button.style.display = index >= 9 && index < 13 ? 'block' : 'none';
+        button.style.display = index >= 3 && index < 8 ? 'block' : 'none';
     });
 });
 
