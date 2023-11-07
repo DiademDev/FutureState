@@ -17,7 +17,7 @@ h1 {
     position: absolute;
     top: 30px;
     left: 70px;
-    z-index: 99;
+    z-index: 99999999;
 }
 
 #lightPanel {
@@ -172,7 +172,7 @@ h1 {
     top: 1px;
     left: 82px; 
     text-align: left;
-    z-index: 99999;
+    z-index: 999;
 
 }
 
@@ -183,7 +183,7 @@ h1 {
     left: 82px; 
     width: 380px;
     height: 380px;
-    z-index: 9999;
+    z-index: 999;
 
 }
 
