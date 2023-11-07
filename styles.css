@@ -36,6 +36,8 @@ h1 {
     top: 50px;
     right: 2%;
     opacity: 100%;
+    z-index: 999999;
+
 }
 
 .coords_but {
